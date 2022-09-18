@@ -18,4 +18,4 @@ function Functions:NewNoti(obj)
     end
 end
 
--- Runeb
+Functions:NewNoti({})
