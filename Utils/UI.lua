@@ -1,7 +1,5 @@
 local ui = {}
 
-local GUIParent = Instance.new("CoreGui")
-
 function ui:create(class, properties)
 	local inst = Instance.new(class)
 	for property, value in pairs(properties) do
@@ -9,6 +7,11 @@ function ui:create(class, properties)
 	end
 	return inst
 end
+
+local self = ui:create("ScreenGui", {
+	Name = "Runebase",
+	Parent = game.CoreGui
+})
 
 function ui:NNotification(obj)
     if(not typeof(obj) == "table") then return end
@@ -18,7 +21,7 @@ function ui:NNotification(obj)
 
     local NNoti = ui:create("Frame", {
         Name = "NNoti",
-        Parent = game:GetService("ScreenGui"),
+        Parent = self,
         BackgroundColor3 = Color3.fromRGB(35, 35, 35),
         BorderColor3 = Color3.fromRGB(0, 0, 0),
         BorderSizePixel = 2,
