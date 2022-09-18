@@ -1,0 +1,25 @@
+local Functions = {}
+
+function Functions:NewNoti(obj)
+    if(not typeof(obj) == "table") then return end
+    obj.Title = obj.Title
+    obj.Desc = obj.Desc
+    obj.Time = obj.Time
+
+    local defualtItems = {
+        Title = "New Title",
+        Desc = "New Desc",
+        Time = 1
+    }
+
+    for index,value in pairs(obj) do
+        print(index)
+        print(value)
+    end
+end
+
+-- Runebase.Utils.UI:NewNoti({
+--     Title = "Runebase",
+--     Desc = "Script is already running!",
+--     Time = 3
+-- })
