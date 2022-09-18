@@ -1,5 +1,8 @@
 local Functions = {}
 
+local a
+local b
+
 function Functions:NewNoti(obj)
     if(not typeof(obj) == "table") then return end
     obj.Title = obj.Title
@@ -13,9 +16,10 @@ function Functions:NewNoti(obj)
     }
 
     for index,value in pairs(obj) do
-        print(index)
-        print(value)
+        a = index
+        b = value
     end
 end
 
-Functions:NewNoti({})
+print(a)
+print(b)
