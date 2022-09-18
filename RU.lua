@@ -15,7 +15,17 @@ function Functions:NewNoti(obj)
     for index,value in pairs(obj) do
         print("INDEX" .. index)
         print("VALUE" .. value)
+
+        if(not value and not index) then
+            for j,k in pairs(defualtItems) do
+                value = k
+                index = j
+            end
+        end
+
+        print("INDEX" .. index)
+        print("VALUE" .. value)
     end
 end
 
-Functions:NewNoti({Title = "Hello", Desc = "World", Time = 2})
+Functions:NewNoti({})
