@@ -18,7 +18,7 @@ function ui:NNotification(obj)
 
     local NNoti = ui:create("Frame", {
         Name = "NNoti",
-        Parent = game.CoreGui,
+        Parent = game:GetService("CoreGui"),
         BackgroundColor3 = Color3.fromRGB(35, 35, 35),
         BorderColor3 = Color3.fromRGB(0, 0, 0),
         BorderSizePixel = 2,
